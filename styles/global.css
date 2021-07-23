@@ -1,5 +1,122 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.content {
+  background-image: url("../images/bg-sand.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-image: url("../images/bg-map.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin: 0 auto;
+  position: relative;
+  height: 211px;
+  width: 375px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    height: 324px;
+    width: 576px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    height: 432px;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    height: 558px;
+    width: 992px;
+  }
+}
+
+.container__title {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 20%;
+  height: auto;
+
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .container__title {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 639px) {
+  .container__title {
+    top: 13%;
+    left: 13%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__title {
+    top: 15%;
+    left: 15%;
+  }
+}
+
+.tend {
+  background-image: url('../images/bg-tend.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 44px;
+  height: 37px;
+
+  position: absolute;
+  bottom: 27%;
+  left: 25.5%;
+}
+
+@media screen and (min-width: 576px) {
+  .tend {
+    bottom: 30%;
+    left: 27.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tend {
+    width: 67px;
+    height: 60px;
+    left: 27%;
+    bottom: 29%;
+  }
 }
