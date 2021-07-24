@@ -12,20 +12,50 @@ body {
 }
 
 body {
-  overflow: hidden;
+  background-color: #333;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background-color: white;
+  }
 }
 
 .content {
-  background-image: url("../images/bg-sand.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 576px) {
+  .content {
+    background-image: url("../images/bg-sand.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 
+ * ================= 
+ * mapa mobile
+ * =================
+ */
+
+.mobile-map {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) {
+  .mobile-map {
+    display: none;
+  }
 }
 
 /* 
@@ -44,10 +74,13 @@ body {
   position: relative;
   height: 211px;
   width: 375px;
+
+  display: none;
 }
 
 @media screen and (min-width: 576px) {
   .container {
+    display: block;
     height: 324px;
     width: 576px;
   }
@@ -86,11 +119,6 @@ body {
 @media screen and (min-width: 576px) {
   .container__title {
     display: inline-block;
-  }
-}
-
-@media screen and (min-width: 639px) {
-  .container__title {
     top: 13%;
     left: 13%;
   }
@@ -275,7 +303,7 @@ body {
   }
 
   .balloon::after {
-    content: '';
+    content: "";
   }
   .balloon.balloon--tend::after {
     bottom: 1px;
@@ -347,7 +375,7 @@ body {
     bottom: -208px;
     left: -39px;
   }
-  
+
   .balloon.balloon--river {
     height: 210px;
     width: 323px;
@@ -383,7 +411,7 @@ body {
   height: 100%;
   width: 100%;
 
-  background-color: rgba(31,31,31,.8);
+  background-color: rgba(31, 31, 31, 0.8);
   z-index: 2;
 
   display: none;
@@ -404,7 +432,7 @@ body {
 
   background-color: black;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   cursor: pointer;
 
